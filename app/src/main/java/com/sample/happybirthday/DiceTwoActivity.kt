@@ -10,6 +10,7 @@ class DiceTwoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice_two)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val rollButton = findViewById<Button>(R.id.button3)
         val result1 = findViewById<ImageView>(R.id.dice1)
         val result2 = findViewById<ImageView>(R.id.dice2)
@@ -19,5 +20,10 @@ class DiceTwoActivity : AppCompatActivity() {
             dice.resultImage(result1)
             dice.resultImage(result2)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }

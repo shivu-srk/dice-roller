@@ -10,6 +10,7 @@ class DiceOneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice_one)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         val rollButton = findViewById<Button>(R.id.button)
         val result = findViewById<ImageView>(R.id.imageView)
         rollButton.setOnClickListener {
@@ -17,5 +18,10 @@ class DiceOneActivity : AppCompatActivity() {
             val dice = DiceRoller()
             dice.resultImage(result)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 }
