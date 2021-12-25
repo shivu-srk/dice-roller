@@ -12,11 +12,11 @@ class MainActivity : AppCompatActivity() {
         val diceOne = findViewById<Button>(R.id.button)
         val diceTwo = findViewById<Button>(R.id.button2)
         diceOne.setOnClickListener {
-            val intent : Intent = Intent(this,DiceOneActivity::class.java)
+            val intent = Intent(this,DiceOneActivity::class.java)
             startActivity(intent)
         }
         diceTwo.setOnClickListener {
-            val intent : Intent = Intent(this,DiceTwoActivity::class.java)
+            val intent = Intent(this,DiceTwoActivity::class.java)
             startActivity(intent)
         }
     }
