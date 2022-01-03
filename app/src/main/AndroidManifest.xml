@@ -11,12 +11,15 @@
         android:theme="@style/Theme.HappyBirthday">
         <activity
             android:name=".DiceTwoActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".DiceOneActivity"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
